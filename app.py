@@ -156,7 +156,7 @@ class AudioApp(QWidget):
             file_name = self.file_list.selectedItems()[0].text()
             folder_path = QFileDialog.getExistingDirectory(self, "Select Folder")
             file_path = os.path.join(folder_path, file_name)
-            file_url - QUrl.fromLocalFile(file_path)
+            file_url = QUrl.fromLocalFile(file_path)
             
             self.media_player.setSource(file_url)
             self.media_player.setPlaybackRate(self.slider.value() / 100.0)
